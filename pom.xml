@@ -9,7 +9,7 @@
                 <module>amelinium-core</module>
                 <module>amelinium-commandline</module>
                 <module>amelinium-web</module>
-		<module>amelinium-confluence</module>
+	<!--	<module>amelinium-confluence</module>-->
 		<module>amelinium-db</module>
 <!-- 		<module>amelinium-gae</module> -->
         </modules>
