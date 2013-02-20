@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        <modelVersion>4.0.0</modelVersion>
+        <parent>
+                <groupId>com.googlecode.amelinium</groupId>
+                <artifactId>amelinium-parent</artifactId>
+                <version>0.2-SNAPSHOT</version>
+        </parent>
+        <groupId>com.googlecode.amelinium</groupId>
+        <artifactId>amelinium-confluence</artifactId>
+        <version>0.2-SNAPSHOT</version>
+        <name>amelinium confluence module</name>
+        <packaging>jar</packaging>
+        <dependencies>
+		<dependency>
+			<groupId>net.java</groupId>
+			<artifactId>textile-j</artifactId>
+			<version>2.2</version>
+		</dependency>        
+		<!-- confluence -->
+		<dependency>
+			<groupId>org.swift.common</groupId>
+			<artifactId>confluence-soap</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swift.confluence.cli</groupId>
+			<artifactId>confluence-cli</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swift.common</groupId>
+			<artifactId>cli-soap</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swift.common</groupId>
+			<artifactId>cli</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.martiansoftware</groupId>
+			<artifactId>jsap</artifactId>
+			<version>2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis</groupId>
+			<artifactId>axis</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.12</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>1.0</version>
+		</dependency>
+                <dependency>
+                        <groupId>com.googlecode.amelinium</groupId>
+                        <artifactId>amelinium-core</artifactId>
+                        <version>0.2-SNAPSHOT</version>
+                </dependency>
+<!-- 
+                <dependency>
+                        <groupId>args4j</groupId>
+                        <artifactId>args4j</artifactId>
+                        <version>[2.0.0,)</version>
+                </dependency>
+-->
+        </dependencies>
+</project>
+
