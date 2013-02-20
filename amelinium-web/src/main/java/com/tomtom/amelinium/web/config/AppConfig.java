@@ -7,15 +7,12 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-import com.tomtom.amelinium.confluence.BacklogPageCorrector;
-import com.tomtom.amelinium.confluence.ChartPageCorrector;
 import com.tomtom.amelinium.db.logic.BacklogDbLogic;
 import com.tomtom.amelinium.db.logic.ChartDbLogic;
 import com.tomtom.amelinium.db.logic.Initializer;
 import com.tomtom.amelinium.db.logic.ProjectDbLogic;
 import com.tomtom.amelinium.projectservice.corrector.ProjectCorrector;
 import com.tomtom.amelinium.projectservice.factory.ProjectServiceFactory;
-import com.tomtom.amelinium.web.confluence.controller.MainController;
 import com.tomtom.amelinium.web.standalone.controller.BacklogController;
 import com.tomtom.amelinium.web.standalone.controller.ChartController;
 import com.tomtom.amelinium.web.standalone.controller.NewProjectController;
@@ -40,11 +37,11 @@ public class AppConfig {
 		return initializer.initializeSqlMapper();
 	}
 
-	@Bean
-	public MainController uploadController() {
-		MainController mainController = new MainController();
-		return mainController;
-	}
+//	@Bean
+//	public MainController uploadController() {
+//		MainController mainController = new MainController();
+//		return mainController;
+//	}
 
 	@Bean
 	public ProjectsController projectsController() {
@@ -69,18 +66,18 @@ public class AppConfig {
 		ChartController chartController = new ChartController();
 		return chartController;
 	}
-
-	@Bean
-	public BacklogPageCorrector backlogPageCorrector() {
-		BacklogPageCorrector backlogPageCorrector = new BacklogPageCorrector();
-		return backlogPageCorrector;
-	}
-
-	@Bean
-	public ChartPageCorrector chartPageCorrector() {
-		ChartPageCorrector chartPageCorrector = new ChartPageCorrector();
-		return chartPageCorrector;
-	}
+//
+//	@Bean
+//	public BacklogPageCorrector backlogPageCorrector() {
+//		BacklogPageCorrector backlogPageCorrector = new BacklogPageCorrector();
+//		return backlogPageCorrector;
+//	}
+//
+//	@Bean
+//	public ChartPageCorrector chartPageCorrector() {
+//		ChartPageCorrector chartPageCorrector = new ChartPageCorrector();
+//		return chartPageCorrector;
+//	}
 	
 	@Bean BacklogDbLogic backlogDbLogic(){
 		BacklogDbLogic backlogDbLogic = new BacklogDbLogic(sqlSessionFactory());

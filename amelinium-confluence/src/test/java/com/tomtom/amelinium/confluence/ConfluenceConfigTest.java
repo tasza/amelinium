@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.tomtom.amelinium.confluence.config.ConfluenceConfig;
+
 public class ConfluenceConfigTest {
 
 	@Test

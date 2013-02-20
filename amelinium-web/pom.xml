@@ -21,11 +21,11 @@
 			<artifactId>amelinium-core</artifactId>
 			<version>0.2-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>com.googlecode.amelinium</groupId>
-			<artifactId>amelinium-confluence</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.googlecode.amelinium</groupId> -->
+<!-- 			<artifactId>amelinium-confluence</artifactId> -->
+<!-- 			<version>0.2-SNAPSHOT</version> -->
+<!-- 		</dependency> -->
 		<dependency>
 			<groupId>com.googlecode.amelinium</groupId>
 			<artifactId>amelinium-db</artifactId>
@@ -151,7 +151,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>amelinium</finalName>
+		<finalName>amelinium-web</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
