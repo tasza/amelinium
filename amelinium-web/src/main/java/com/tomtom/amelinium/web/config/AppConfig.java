@@ -37,12 +37,6 @@ public class AppConfig {
 		return initializer.initializeSqlMapper();
 	}
 
-//	@Bean
-//	public MainController uploadController() {
-//		MainController mainController = new MainController();
-//		return mainController;
-//	}
-
 	@Bean
 	public ProjectsController projectsController() {
 		ProjectsController projectsController = new ProjectsController();
@@ -66,19 +60,7 @@ public class AppConfig {
 		ChartController chartController = new ChartController();
 		return chartController;
 	}
-//
-//	@Bean
-//	public BacklogPageCorrector backlogPageCorrector() {
-//		BacklogPageCorrector backlogPageCorrector = new BacklogPageCorrector();
-//		return backlogPageCorrector;
-//	}
-//
-//	@Bean
-//	public ChartPageCorrector chartPageCorrector() {
-//		ChartPageCorrector chartPageCorrector = new ChartPageCorrector();
-//		return chartPageCorrector;
-//	}
-	
+
 	@Bean BacklogDbLogic backlogDbLogic(){
 		BacklogDbLogic backlogDbLogic = new BacklogDbLogic(sqlSessionFactory());
 		return backlogDbLogic;

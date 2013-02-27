@@ -32,6 +32,7 @@ public class ProjectCorrector {
 		this.projectDbLogic = new ProjectDbLogic(sqlMapper);
 		this.projectSnapshotFactory = new ProjectSnapshotFactory(sqlMapper);
 		this.backlogDbLogic = new BacklogDbLogic(sqlMapper);
+		this.chartDbLogic = new ChartDbLogic(sqlMapper);
 		this.snapshotDbLogic = new SnapshotDbLogic(sqlMapper);
 	}
 	/**
