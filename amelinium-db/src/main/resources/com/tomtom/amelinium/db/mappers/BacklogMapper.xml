@@ -7,7 +7,6 @@
 		into backlog (
 		dt, revision, content, revertedFromRevision
 		) values (
-<!-- 		#{dt}, -->
 		to_timestamp(#{dt},'YYYY-MM-DD HH24:MI:SS'),
 		#{revision},
 		#{content},
@@ -17,33 +16,11 @@
 
 	<select id="selectCurrentId" resultType="int">
 	    select max(backlogId) from snapshot where projectId=#{value}
-	    <!--
-		select distinct
-		b.id
-		from snapshot
-		s, project p, backlog b
-		where s.revision=(select max(b.revision) from
-		backlog b)
-		and s.projectId=p.id
-		and s.backlogId=b.id
-		and p.id = #{value}
-		  -->
 	</select>
 
+	<!-- selects newest backlog id from ALL PROJECTS!!! -->
 	<select id="selectNewestId" resultType="int">
 		select max(id) from backlog where dt in(select max(dt) from backlog)
-	</select>
-
-	<select id="selectCurrentRevision" resultType="int">
-		select distinct
-		b.revision
-		from snapshot s, project p, backlog b
-		where s.revision=(select
-		max(b.revision) from backlog b)
-		and s.projectId=p.id
-		and
-		s.backlogId=b.id
-		and p.id = #{value}
 	</select>
 
 	<select id="selectAll" resultType="backlog">

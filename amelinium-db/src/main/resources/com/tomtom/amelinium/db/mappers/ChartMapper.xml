@@ -15,36 +15,13 @@
 	</insert>
 
 	<select id="selectCurrentId" resultType="int">
-	    select max(chartId) from snapshot where projectId=#{value}
-	    <!-- 
-		select distinct
-		c.id
-		from snapshot
-		s, project p, chart c
-		where s.revision=(select max(c.revision) from
-		chart c)
-		and s.projectId=p.id
-		and s.chartId=c.id
-		and p.id = #{value}
-		 -->
-		
+	    select max(chartId) from snapshot where projectId=#{value}		
 	</select>
 
+	<!-- selects newest chart id from ALL PROJECTS!!! -->
 	<select id="selectNewestId" resultType="int">
 		 select max(id) from chart where dt in(select max(dt) from chart)
 	</select>
-
-	<select id="selectCurrentRevision" resultType="int">
-		select distinct
-		c.revision
-		from snapshot s, project p, chart c
-		where s.revision=(select
-		max(c.revision) from chart c)
-		and s.projectId=p.id
-		and s.chartId=c.id
-		and p.id = #{value}
-	</select>
-
 
 	<select id="selectAll" resultType="chart">
 		select

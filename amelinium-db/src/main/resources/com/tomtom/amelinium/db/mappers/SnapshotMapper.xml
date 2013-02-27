@@ -7,7 +7,8 @@
 		insert
 		into snapshot (
 		dt, revision, sync, projectId, backlogId, chartId
-		) values (
+		)
+		values (
 		to_timestamp(#{dt},'YYYY-MM-DD HH24:MI:SS'),
 		#{revision},
 		#{sync},
@@ -18,21 +19,12 @@
 	</insert>
 
 	<select id="selectCurrentId" resultType="int">
-		select distinct
-		s.id
-		from snapshot s, project p
-		where s.revision=(select max(s.revision) from snapshot s)
-		and s.projectId=p.id
-		and p.id = #{value}
+		select max(s.id) from snapshot s where s.projectId=#{value};
 	</select>
-	
-		<select id="selectCurrentRevision" resultType="int">
-		select distinct
-		s.revision
-		from snapshot s, project p
-		where s.revision=(select max(s.revision) from snapshot s)
-		and s.projectId=p.id
-		and p.id = #{value}
+
+	<select id="selectCurrentRevision" resultType="int">
+		select
+		max(s.revision) from snapshot s where s.projectId=#{value};
 	</select>
 
 	<select id="selectAll" resultType="snapshot">
@@ -45,11 +37,12 @@
 		select
 		*
 		from snapshot
-		where id = #{value}
+		where id =
+		#{value}
 	</select>
-	
+
 	<delete id="delete">
-	    delete from snapshot where projectId=#{value}
+		delete from snapshot where projectId=#{value}
 	</delete>
 
 </mapper>
