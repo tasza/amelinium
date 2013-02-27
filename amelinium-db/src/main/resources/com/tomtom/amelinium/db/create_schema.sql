@@ -30,4 +30,4 @@ foreign key(chartId) references chart(id) on delete cascade on update cascade);
 insert into project(dtCreated,dtLastModified,name) values('2013-02-13 11:08:46+01:00','2013-02-13 11:08:46+01:00','Example');
 insert into backlog(dt,revision,content) values('2013-02-13 11:08:46+01:00',1,'this is backlog');
 insert into chart(dt,revision,content) values('2013-02-13 11:08:46+01:00',1,'this is chart');
-insert into snapshot(dt,revision,projectId,backlogId,chartId) values ('2013-02-13 11:08:46+01:00',1,1,1,1);
+insert into snapshot(dt,revision,sync,projectId,backlogId,chartId) values ('2013-02-13 11:08:46+01:00',1,'synchronized',1,1,1);
