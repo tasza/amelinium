@@ -4,6 +4,3 @@ deploy:
   api_key:
     secure: UtndscYwf8mZCXuijFm2JVugSAe1Ygk4RbrINOKJ2YnibFdpKmOmWT2dLJ/U5uvFdCs4vwtWJ4dXhhM668KR7ubvah0op4BpCu+SKrIYZ+8melhcZxWmLdb50EDKTvbx5gTDrPliJsmi1wGjn/rxr5GcY02LVc6RmhUAwihrIDc=
   app: amelinium
-  on:
-    repo: tasza/amelinium
-    branch: ''
